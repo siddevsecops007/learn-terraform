@@ -14,7 +14,7 @@ variable "list1" {
   default = [
     10,
     20,
-    abc,
+    "abc",
     100
   ]
 }
