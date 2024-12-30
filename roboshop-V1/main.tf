@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = Z0839824JM76ZIPWFCGH
+  zone_id = "Z0839824JM76ZIPWFCGH"
   name    = "frontend-dev.siddevsecops.icu"
   type    = "A"
   ttl     = 30
@@ -28,7 +28,7 @@ resource "aws_instance" "catalogue" {
 }
 
 resource "aws_route53_record" "catalogue" {
-  zone_id = Z0839824JM76ZIPWFCGH
+  zone_id = "Z0839824JM76ZIPWFCGH"
   name    = "catalogue-dev.siddevsecops.icu"
   type    = "A"
   ttl     = 30
@@ -47,7 +47,7 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "aws_route53_record" "mongodb" {
-  zone_id = Z0839824JM76ZIPWFCGH
+  zone_id = "Z0839824JM76ZIPWFCGH"
   name    = "mongodb-dev.siddevsecops.icu"
   type    = "A"
   ttl     = 30
