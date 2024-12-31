@@ -13,13 +13,11 @@ module "ec2" {
 }
 
 
-output "ip_address" {
-  value = module.ec2
-}
 
-# module "route53" {
-#   count = length(var.instances)
-#   source = "./route 53"
-#   instance_name = var.instances[count.index]
-#   ip_address = module.ec2[count.index]
-# }
+
+module "route53" {
+  count = length(var.instances)
+  source = "./route 53"
+  instance_name = var.instances[count.index]
+  ip_address = module.ec2[count.index].ip_address
+}
