@@ -1,15 +1,18 @@
 # 01 frontend
 resource "aws_instance" "frontend" {
+#  ami = "ami-09c813fb71547fc4f"
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "frontend"
   }
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z0839824JM76ZIPWFCGH"
+#  zone_id = "Z0839824JM76ZIPWFCGH"
+  zone_id = "Z09554111AOE4XJPNZU5J"
   name    = "frontend-dev.siddevsecops.icu"
   type    = "A"
   ttl     = 30
@@ -21,7 +24,8 @@ resource "aws_route53_record" "frontend" {
 resource "aws_instance" "catalogue" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "catalogue"
   }
@@ -40,7 +44,8 @@ resource "aws_route53_record" "catalogue" {
 resource "aws_instance" "mongodb" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "mongodb"
   }
@@ -60,7 +65,8 @@ resource "aws_route53_record" "mongodb" {
 resource "aws_instance" "user" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "user"
   }
@@ -81,7 +87,8 @@ resource "aws_route53_record" "user" {
 resource "aws_instance" "redis" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "redis"
   }
@@ -100,7 +107,8 @@ resource "aws_route53_record" "redis" {
 resource "aws_instance" "cart" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "cart"
   }
@@ -118,7 +126,8 @@ resource "aws_route53_record" "cart" {
 resource "aws_instance" "shipping" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "shipping"
   }
@@ -136,7 +145,8 @@ resource "aws_route53_record" "shipping" {
 resource "aws_instance" "mysql" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "mysql"
   }
@@ -154,7 +164,8 @@ resource "aws_route53_record" "mysql" {
 resource "aws_instance" "payment" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "payment"
   }
@@ -172,7 +183,8 @@ resource "aws_route53_record" "payment" {
 resource "aws_instance" "rabbitmq" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "rabbitmq"
   }
@@ -191,7 +203,8 @@ resource "aws_route53_record" "rabbitmq" {
 resource "aws_instance" "dispatch" {
   ami = "ami-09c813fb71547fc4f"
   instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+#  vpc_security_group_ids = ["sg-09f30f430454f4900"]
+  vpc_security_group_ids = ["sg-0e784f3276f8e45bd"]
   tags = {
     Name = "dispatch"
   }
